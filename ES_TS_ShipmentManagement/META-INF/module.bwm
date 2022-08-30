@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:Common="http://www.eniquesolution.com/E-Commerce/Common" xmlns:ShipmentManagement="http://www.EniqueSolution.com/abstarct/V1/ShipmentManagement/" xmlns:ShipmentManagement_1="http://www.example.org/ShipmentManagement" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_QA8qIBJREe2DWLkYUQ3niA" targetNamespace="http://tns.tibco.com/bw/composite/ES_TS_ShipmentManagement" name="ES_TS_ShipmentManagement" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_IHQUkBJSEe2DWLkYUQ3niA" name="ShipmentManagement" promote="ComponentTS_ShipmentManagement/ShipmentManagement">
+    <sca:interface.wsdl xmi:id="_IHQ7oBJSEe2DWLkYUQ3niA" interface="http://www.EniqueSolution.com/abstarct/V1/ShipmentManagement/#wsdl.interface(ShipmentManagement)" scaext:wsdlLocation="../../ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_TCfTEBJSEe2DWLkYUQ3niA" name="SOAPServiceBinding" targetNamespace="http://www.EniqueSolution.com/abstarct/Shipment/2d6019ecc9e74e3c938761776ab7d95d/SOAPServiceBinding" portTypeQName="ShipmentManagement:ShipmentManagement" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl">
+      <bindingType xmi:id="_TDQvIBJSEe2DWLkYUQ3niA"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_dWmAIBJSEe2DWLkYUQ3niA" jmsResource="es_common_model.JMSConnectionResource" messageType="Text"/>
+      <operationConfiguration xmi:id="_TDRWMBJSEe2DWLkYUQ3niA" operationName="UpdateShipment" action="UpdateShipment" actionNeeded="true">
+        <bindingType xmi:id="_TDRWMRJSEe2DWLkYUQ3niA"/>
+        <messageConfiguration xmi:id="_TDRWMhJSEe2DWLkYUQ3niA" messageQName="ShipmentManagement:UpdateShipmentRequest" wsdlLocation="platform:/resource/ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_TDRWMxJSEe2DWLkYUQ3niA" partName="parameters" partElementName="ShipmentManagement_1:updateShipmentReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_TDRWNBJSEe2DWLkYUQ3niA" messageQName="ShipmentManagement:UpdateShipmentResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_TDRWNRJSEe2DWLkYUQ3niA" partName="parameters" partElementName="ShipmentManagement_1:updateShipmentRes"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_TDRWNhJSEe2DWLkYUQ3niA" messageQName="ShipmentManagement:UpdateShipmentFault" messageDirection="FAULT" action="fault" wsdlLocation="platform:/resource/ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_TDRWNxJSEe2DWLkYUQ3niA" partName="parameters" partElementName="Common:Fault"/>
+        </messageConfiguration>
+        <context xmi:id="_TDR9SBJSEe2DWLkYUQ3niA">
+          <inputMapping xmi:id="_TDR9SRJSEe2DWLkYUQ3niA"/>
+          <outputMapping xmi:id="_TDSkUBJSEe2DWLkYUQ3niA" direction="OUTPUT"/>
+          <faultMappings xmi:id="_TDTycBJSEe2DWLkYUQ3niA" direction="FAULT" faultName="fault"/>
+        </context>
+      </operationConfiguration>
+      <operationConfiguration xmi:id="_TDR9QBJSEe2DWLkYUQ3niA" operationName="TrackShipment" action="TrackShipment" actionNeeded="true">
+        <bindingType xmi:id="_TDR9QRJSEe2DWLkYUQ3niA"/>
+        <messageConfiguration xmi:id="_TDR9QhJSEe2DWLkYUQ3niA" messageQName="ShipmentManagement:TrackShipmentRequest" wsdlLocation="platform:/resource/ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_TDR9QxJSEe2DWLkYUQ3niA" partName="parameters" partElementName="ShipmentManagement_1:TrackShipReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_TDR9RBJSEe2DWLkYUQ3niA" messageQName="ShipmentManagement:TrackShipmentResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_TDR9RRJSEe2DWLkYUQ3niA" partName="parameters" partElementName="ShipmentManagement_1:TrackShipRes"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_TDR9RhJSEe2DWLkYUQ3niA" messageQName="ShipmentManagement:TrackShipmentFault" messageDirection="FAULT" action="fault" wsdlLocation="platform:/resource/ES_ShipmentManagement_SH/Service%20Descriptors/ShipmentManagement.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_TDR9RxJSEe2DWLkYUQ3niA" partName="fault" partElementName="Common:Fault"/>
+        </messageConfiguration>
+        <context xmi:id="_TDTycRJSEe2DWLkYUQ3niA">
+          <inputMapping xmi:id="_TDUZgBJSEe2DWLkYUQ3niA"/>
+          <outputMapping xmi:id="_TDUZgRJSEe2DWLkYUQ3niA" direction="OUTPUT"/>
+          <faultMappings xmi:id="_TDVAkBJSEe2DWLkYUQ3niA" direction="FAULT" faultName="fault"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_TDVAkRJSEe2DWLkYUQ3niA" bindingName="SOAPServiceBinding">
+      <sca:property xmi:id="_elWSQBJSEe2DWLkYUQ3niA" name="destination" scaext:simpleValue="//ES_Common_Model///Connections/JMS/QueueName"/>
+    </scact:bindingAdjunct>
+  </sca:service>
+  <sca:property xmi:id="_QJSt0BJREe2DWLkYUQ3niA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QJh-YBJREe2DWLkYUQ3niA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QJs9gBJREe2DWLkYUQ3niA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QKBtoBJREe2DWLkYUQ3niA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QKTacBJREe2DWLkYUQ3niA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QKfnsBJREe2DWLkYUQ3niA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QKrN4BJREe2DWLkYUQ3niA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QLCaQBJREe2DWLkYUQ3niA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QLOngBJREe2DWLkYUQ3niA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_8JF5cBJREe2DWLkYUQ3niA" name="ComponentTS_ShipmentManagement" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8JF5cRJREe2DWLkYUQ3niA" processName="es_ts_shipmentmanagement.TS_ShipmentManagement"/>
+    <sca:service xmi:id="_IHPtgBJSEe2DWLkYUQ3niA" name="ShipmentManagement">
+      <sca:interface.wsdl xmi:id="_IHPtgRJSEe2DWLkYUQ3niA" interface="http://www.EniqueSolution.com/abstarct/V1/ShipmentManagement/#wsdl.interface(ShipmentManagement)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

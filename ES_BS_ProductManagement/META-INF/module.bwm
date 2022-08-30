@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_ldMhwNpVEey1cLkC0cO2qg" targetNamespace="http://tns.tibco.com/bw/composite/ES_BS_ProductManagement" name="ES_BS_ProductManagement" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_ADAiwNpWEey1cLkC0cO2qg" name="GetAllProducts" promote="ComponentProductManagement/GetAllProducts">
+    <sca:interface.wsdl xmi:id="_ADNXENpWEey1cLkC0cO2qg" interface="http://xmlns.example.com/20220523103544PLT#wsdl.interface(GetAllProducts)" scaext:wsdlLocation="../Processes/es_bs_productmanagement/ProductManagement.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_ADpb8NpWEey1cLkC0cO2qg" name="RestService" path="/GetAllProducts" docBasePath="http://localhost:7777/ES_BS_ProductManagement" docResourcePath="ProductManagement" basePath="/" connector="es_common_model.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json">
+      <operation xmi:id="_AD5TkNpWEey1cLkC0cO2qg" operationName="get" nickname="get-GetAllProducts" httpMethod="GET" notes="getProductManagement" responseStyle="element" outputPartName="item">
+        <parameters xmi:id="_nAOzENpbEey1cLkC0cO2qg">
+          <parameterMapping xmi:id="_nAPaINpbEey1cLkC0cO2qg" parameterName="SessionId" parameterType="Query" dataType="string"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_ADpb8dpWEey1cLkC0cO2qg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_AD5TkdpWEey1cLkC0cO2qg" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_bokFUdpdEey1cLkC0cO2qg" name="GetProductsCategory" promote="ComponentProductManagement/GetProductsCategory">
+    <sca:interface.wsdl xmi:id="_boksYNpdEey1cLkC0cO2qg" interface="http://xmlns.example.com/20220523103544PLT#wsdl.interface(GetProductsCategory)" scaext:wsdlLocation="../Processes/es_bs_productmanagement/ProductManagement.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_bpHe8NpdEey1cLkC0cO2qg" name="RestService1" path="/GetProductsCategory" docBasePath="http://localhost:7777/ES_BS_ProductManagement" docResourcePath="ProductManagement" basePath="/" connector="es_common_model.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json">
+      <operation xmi:id="_bpWvgNpdEey1cLkC0cO2qg" operationName="get" nickname="get-GetProductsCategory" httpMethod="GET" notes="getProductManagement" responseStyle="element" requestStyle="element" outputPartName="item">
+        <parameters xmi:id="_ij3OENpeEey1cLkC0cO2qg">
+          <parameterMapping xmi:id="_ij3OEdpeEey1cLkC0cO2qg" parameterName="SessionId" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_iySEkNpeEey1cLkC0cO2qg" parameterName="CategoryId" parameterType="Query" dataType="string"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_bpHe8dpdEey1cLkC0cO2qg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_bpWvgdpdEey1cLkC0cO2qg" bindingName="RestService1"/>
+  </sca:service>
+  <sca:service xmi:id="_sSdS8tphEey1cLkC0cO2qg" name="GetIndividualProduct" promote="ComponentProductManagement/GetIndividualProduct">
+    <sca:interface.wsdl xmi:id="_sSd6ANphEey1cLkC0cO2qg" interface="http://xmlns.example.com/20220523103544PLT#wsdl.interface(GetIndividualProduct)" scaext:wsdlLocation="../Processes/es_bs_productmanagement/ProductManagement.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_sTIBUNphEey1cLkC0cO2qg" name="RestService2" path="/GetIndividualProduct" docBasePath="http://localhost:7777/ES_BS_ProductManagement" docResourcePath="ProductManagement" basePath="/" connector="es_common_model.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json">
+      <operation xmi:id="_sTVcsNphEey1cLkC0cO2qg" operationName="get" nickname="get-GetIndividualProduct" httpMethod="GET" notes="getProductManagement" responseStyle="element" outputPartName="item">
+        <parameters xmi:id="_XJkiwNpjEey1cLkC0cO2qg">
+          <parameterMapping xmi:id="_XJkiwdpjEey1cLkC0cO2qg" parameterName="SesionId" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_XaTGYNpjEey1cLkC0cO2qg" parameterName="ProductId" parameterType="Query" dataType="string"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_sTIBUdphEey1cLkC0cO2qg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_sTVcsdphEey1cLkC0cO2qg" bindingName="RestService2"/>
+  </sca:service>
+  <sca:property xmi:id="_mI7mYNpVEey1cLkC0cO2qg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJEJQNpVEey1cLkC0cO2qg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJGlgNpVEey1cLkC0cO2qg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJJBwNpVEey1cLkC0cO2qg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJLeANpVEey1cLkC0cO2qg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJOhUNpVEey1cLkC0cO2qg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJQWgNpVEey1cLkC0cO2qg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJSywNpVEey1cLkC0cO2qg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mJVPANpVEey1cLkC0cO2qg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_AC5OANpWEey1cLkC0cO2qg" name="ComponentProductManagement" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_AC5OAdpWEey1cLkC0cO2qg" processName="es_bs_productmanagement.ProductManagement"/>
+    <sca:service xmi:id="_AC84YNpWEey1cLkC0cO2qg" name="GetAllProducts">
+      <sca:interface.wsdl xmi:id="_AC9fcNpWEey1cLkC0cO2qg" interface="http://xmlns.example.com/20220523103544PLT#wsdl.interface(GetAllProducts)" scaext:wsdlLocation="../Processes/es_bs_productmanagement/ProductManagement.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_bojeQNpdEey1cLkC0cO2qg" name="GetProductsCategory">
+      <sca:interface.wsdl xmi:id="_bokFUNpdEey1cLkC0cO2qg" interface="http://xmlns.example.com/20220523103544PLT#wsdl.interface(GetProductsCategory)"/>
+    </sca:service>
+    <sca:service xmi:id="_sSdS8NphEey1cLkC0cO2qg" name="GetIndividualProduct">
+      <sca:interface.wsdl xmi:id="_sSdS8dphEey1cLkC0cO2qg" interface="http://xmlns.example.com/20220523103544PLT#wsdl.interface(GetIndividualProduct)"/>
+    </sca:service>
+  </sca:component>
+  <sca:component xmi:id="_9Ff3sNp0Eey1cLkC0cO2qg" name="ComponentAddProducts" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9Ff3sdp0Eey1cLkC0cO2qg" processName="es_bs_productmanagement.AddProducts"/>
+  </sca:component>
+  <sca:component xmi:id="_LDVdoNy8Eey1cLkC0cO2qg" name="ComponentupdateProducts" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_LDVdody8Eey1cLkC0cO2qg" processName="es_bs_productmanagement.updateProducts"/>
+  </sca:component>
+  <sca:component xmi:id="_mKpuQOCjEey1cLkC0cO2qg" name="ComponentDeleteProducts" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_mKpuQeCjEey1cLkC0cO2qg" processName="es_bs_productmanagement.DeleteProducts"/>
+  </sca:component>
+  <sca:component xmi:id="_NWjgkAvnEe2JE958XQeMhA" name="ComponentTimerAddProduct" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NWjgkQvnEe2JE958XQeMhA" processName="ES_BS_ProductManagement_Sub.TimerAddProduct"/>
+  </sca:component>
+  <sca:component xmi:id="_Hm4n0A4zEe2JE958XQeMhA" name="ComponentUpdateProductTimer" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Hm4n0Q4zEe2JE958XQeMhA" processName="ES_BS_ProductManagement_Sub.UpdateProductTimer"/>
+  </sca:component>
+  <sca:component xmi:id="_Mj6NkA5WEe2XqqF4ex_VCw" name="ComponentDeleteProductTimer" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Mj6NkQ5WEe2XqqF4ex_VCw" processName="ES_BS_ProductManagement_Sub.DeleteProductTimer"/>
+  </sca:component>
+</sca:composite>

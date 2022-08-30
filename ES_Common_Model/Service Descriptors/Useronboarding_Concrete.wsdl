@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolution.com/concrete/V1/UserOnBoarding" xmlns:tns0="http://www.eniquesolution.com/E-Commerce/UserOnBoarding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserOnBoarding" targetNamespace="http://www.EniqueSolution.com/concrete/V1/UserOnBoarding">
+  <wsdl:types>
+    <xsd:schema xmlns:tns="http://www.eniquesolution.com/E-Commerce/UserOnBoarding" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/UserOnBoarding">
+      <xsd:complexType name="CreateAccountReqType">
+        <xsd:sequence>
+          <xsd:element name="FirstName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="MiddleName" type="xsd:string"/>
+          <xsd:element name="LastName" type="xsd:string"/>
+          <xsd:element name="PhoneNum" type="xsd:string"/>
+          <xsd:element name="Gender" type="xsd:string"/>
+          <xsd:element name="Email" type="xsd:string"/>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element name="Password" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CreateAccountResType">
+        <xsd:sequence>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element name="RespCode" type="xsd:string"/>
+          <xsd:element name="RespText" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CreateAccountReq" type="tns:CreateAccountReqType"/>
+      <xsd:element name="CreateAccountRes" type="tns:CreateAccountResType"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateAccountRequest">
+    <wsdl:part element="tns0:CreateAccountReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateAccountResponse">
+    <wsdl:part element="tns0:CreateAccountRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="UserOnBoarding">
+    <wsdl:operation name="CreateAccount">
+      <wsdl:input message="tns:CreateAccountRequest"/>
+      <wsdl:output message="tns:CreateAccountResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:UserOnBoarding">
+    <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+    <jms:binding messageFormat="text"/>
+    <wsdl:operation name="CreateAccount">
+      <soap:operation soapAction="CreateAccount" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserOnBoarding">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="UserOnBoardingSOAP">
+      <soap:address location=""/>
+      <jms:connectionFactory/>
+      <jms:targetAddress destination="queue">UserOnBoarding.CreateAccount.q</jms:targetAddress>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

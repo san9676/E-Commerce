@@ -1,0 +1,100 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "OrderMangement",
+    "description" : "OrderMangement service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/CreateOrder" : {
+      "post" : {
+        "summary" : "postOrderMangement",
+        "description" : "postOrderMangement",
+        "operationId" : "post-CreateOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CreateOrderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CreateOrderRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CreateOrderRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CreateOrderReq" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "CUSTOMERID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "Quantity" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "LIST_PRICE" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "DISCOUNT" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ORDER_STATUS" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ORDER_DATE" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string",
+          "format" : "date-time"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateOrderRes" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

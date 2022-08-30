@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_TucD0BI2Ee2DWLkYUQ3niA" targetNamespace="http://tns.tibco.com/bw/composite/ES_BS_ShipmentManagement" name="ES_BS_ShipmentManagement" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_AZOSohfIEe2oyPp9ujPhtQ" name="updateShipment" promote="ComponentShipmentMgnt/updateShipment">
+    <sca:interface.wsdl xmi:id="_AZO5sBfIEe2oyPp9ujPhtQ" interface="http://xmlns.example.com/20220809151530PLT#wsdl.interface(updateShipment)" scaext:wsdlLocation="../Processes/es_bs_shipmentmanagement/ShipmentMgnt.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_AaVs8BfIEe2oyPp9ujPhtQ" name="RestService" path="/updateShipment" docBasePath="http://localhost:7777/ES_BS_ShipmentManagement" docResourcePath="ShipmentMgnt" basePath="/" connector="es_common_model.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_shipmentmanagement.ShipmentMgnt-ShipmentMgnt.json">
+      <operation xmi:id="_AbLacBfIEe2oyPp9ujPhtQ" operationName="post" nickname="post-updateShipment" httpMethod="POST" notes="postShipmentMgnt" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_AbdHQBfIEe2oyPp9ujPhtQ"/>
+      <advancedConfig xmi:id="_AaVs8RfIEe2oyPp9ujPhtQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_AbLacRfIEe2oyPp9ujPhtQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_42X6UhfJEe2oyPp9ujPhtQ" name="trackShip" promote="ComponentShipmentMgnt/trackShip">
+    <sca:interface.wsdl xmi:id="_42X6VhfJEe2oyPp9ujPhtQ" interface="http://xmlns.example.com/20220809151530PLT#wsdl.interface(trackShip)" scaext:wsdlLocation="../Processes/es_bs_shipmentmanagement/ShipmentMgnt.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_44OUcBfJEe2oyPp9ujPhtQ" name="RestService2" path="/trackShipment" docBasePath="http://localhost:7777/ES_BS_ShipmentManagement" docResourcePath="ShipmentMgnt" basePath="/" connector="es_common_model.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/es_bs_shipmentmanagement.ShipmentMgnt-ShipmentMgnt.json">
+      <operation xmi:id="_45Da4BfJEe2oyPp9ujPhtQ" operationName="post" nickname="post-trackShip" httpMethod="POST" notes="postShipmentMgnt" responseStyle="element" requestStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_44OUcRfJEe2oyPp9ujPhtQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_45Da4RfJEe2oyPp9ujPhtQ" bindingName="RestService2"/>
+  </sca:service>
+  <sca:property xmi:id="_Vl57wBI2Ee2DWLkYUQ3niA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmApcBI2Ee2DWLkYUQ3niA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmDFsBI2Ee2DWLkYUQ3niA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmGJABI2Ee2DWLkYUQ3niA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmLBgBI2Ee2DWLkYUQ3niA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmOr4BI2Ee2DWLkYUQ3niA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmRIIBI2Ee2DWLkYUQ3niA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmWAoBI2Ee2DWLkYUQ3niA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_VmZrABI2Ee2DWLkYUQ3niA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_AZLPUBfIEe2oyPp9ujPhtQ" name="ComponentShipmentMgnt" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_AZLPURfIEe2oyPp9ujPhtQ" processName="es_bs_shipmentmanagement.ShipmentMgnt"/>
+    <sca:service xmi:id="_AZOSoBfIEe2oyPp9ujPhtQ" name="updateShipment">
+      <sca:interface.wsdl xmi:id="_AZOSoRfIEe2oyPp9ujPhtQ" interface="http://xmlns.example.com/20220809151530PLT#wsdl.interface(updateShipment)" scaext:wsdlLocation="../Processes/es_bs_shipmentmanagement/ShipmentMgnt.bwp"/>
+    </sca:service>
+    <sca:service xmi:id="_42X6UBfJEe2oyPp9ujPhtQ" name="trackShip">
+      <sca:interface.wsdl xmi:id="_42X6URfJEe2oyPp9ujPhtQ" interface="http://xmlns.example.com/20220809151530PLT#wsdl.interface(trackShip)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolution.com/E-Commerce/UserOnBoarding" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/UserOnBoarding">
+            
+  
+  
+  
+  <complexType name="CreateAccountReqType">
+                    	
+    
+    
+    
+    <sequence>
+          	
+      <element name="FirstName" type="string" maxOccurs="1" minOccurs="0"/>
+          	
+      <element maxOccurs="1" minOccurs="0" name="MiddleName" type="string"/>
+          	
+      <element name="LastName" type="string" maxOccurs="1" minOccurs="0"/>
+          	
+      <element name="PhoneNum" type="string" maxOccurs="1" minOccurs="0"/>
+          	
+      <element name="Gender" type="string" maxOccurs="1" minOccurs="0"/>
+          	
+      <element name="Email" type="string" maxOccurs="1" minOccurs="0"/>
+          	
+      <element name="Username" type="string" maxOccurs="1" minOccurs="0"/>
+          	
+      <element name="Password" type="string" maxOccurs="1" minOccurs="0"/>
+      
+   
+          	
+    
+    </sequence>
+      
+  </complexType>
+            
+    
+  
+  
+  
+  <complexType name="CreateAccountResType">
+                    	
+    
+    
+    
+    <sequence>
+                            		
+      
+      
+      
+      <element name="Username" type="string"/>
+                            		
+      
+      
+      
+      <element name="RespCode" type="string"/>
+                            		
+      
+      
+      
+      <element name="RespText" type="string"/>
+                            	
+    
+    
+    
+    </sequence>
+                    
+  
+  
+  
+  </complexType>
+            
+  
+  
+  
+  <element name="CreateAccountReq" type="tns:CreateAccountReqType"/>
+            
+    
+  
+  
+  
+  <element name="CreateAccountRes" type="tns:CreateAccountResType"/>
+            
+  
+  
+  
+  
+
+    
+  <complexType name="UpdateAccountReqType">
+        	
+    <sequence>
+          	
+      <element maxOccurs="1" minOccurs="0" name="FirstName" type="string"/>
+          	
+      <element maxOccurs="1" minOccurs="0" name="MiddleName" type="string"/>
+          	
+      <element minOccurs="0" name="LastName" type="string"/>
+          	
+      <element maxOccurs="1" minOccurs="0" name="PhoneNum" type="string"/>
+          	
+      <element maxOccurs="1" minOccurs="0" name="Gender" type="string"/>
+          	
+      <element maxOccurs="1" minOccurs="0" name="Email" type="string"/>
+          	
+      <element name="Username" type="string"/>
+          	
+      <element maxOccurs="1" minOccurs="0" name="Password" type="string"/>
+      <element name="SessionID" type="string" maxOccurs="1" minOccurs="0"/>
+          	
+    
+    </sequence>
+        
+  </complexType>
+      
+  <complexType name="UpdateAccountResType">
+        	
+    <sequence>
+          		
+      <element name="Username" type="string"/>
+          		
+      <element name="Status" type="string"/>
+          		
+      <element name="ResMsg" type="string"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="UpdateAccountReq" type="tns:UpdateAccountReqType"/>
+      
+    
+  <element name="UpdateAccountRes" type="tns:UpdateAccountResType"/>
+      
+      
+  
+
+  <complexType name="DeactivateAccReqType">
+  	<sequence>
+  		<element name="Username" type="string"></element>
+  		<element name="Password" type="string"></element>
+  		<element name="SessionID" type="string" maxOccurs="1" minOccurs="0"/>
+  	</sequence>
+  </complexType>
+
+  <complexType name="DeactivateAccResType">
+  	<sequence>
+  		<element name="username" type="string" maxOccurs="1" minOccurs="0"></element>
+  		<element name="ResCode" type="string" maxOccurs="1" minOccurs="0"></element>
+  		<element name="ResMsg" type="string" maxOccurs="1" minOccurs="0"></element>
+  	</sequence>
+  </complexType>
+  
+    <element name="DeactivateAccReq" type="tns:DeactivateAccReqType"></element>
+    
+    <element name="DeactivateAccRes" type="tns:DeactivateAccResType"></element>
+
+    <complexType name="GetAccDetailsResType">
+     <sequence>
+
+     	<element name="FirstName" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element maxOccurs="1" minOccurs="0" name="MiddleName"
+     		type="string" />
+
+     	<element name="LastName" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="PhoneNum" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="Gender" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="Email" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="Username" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="Password" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+
+     	<element name="ResCode" type="string" minOccurs="0"></element>
+     	<element name="ResMsg" type="string" minOccurs="0"></element>
+     </sequence>
+    </complexType>
+
+    <element name="GetAccDetailsRes" type="tns:GetAccDetailsResType"></element>
+
+    <element name="GetAccDetailsReq" type="tns:GetAccDetailsReqType"></element>
+    
+    <complexType name="GetAccDetailsReqType">
+    	<sequence>
+    		<element name="username" type="string"></element>
+    		<element name="SessionID" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="GetDeatilsResType">
+    	<sequence>
+    		<element name="Username" type="string"></element>
+    		<element name="Status" type="string"></element>
+    		<element name="ResMsg" type="string"></element>
+    		<element name="Details" type="tns:DetailsType" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <element name="GetDeatils" type="tns:GetDeatilsResType"></element>
+
+    <complexType name="DetailsType">
+    <sequence>
+
+     	<element name="FirstName" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element maxOccurs="1" minOccurs="0" name="MiddleName"
+     		type="string" />
+
+     	<element name="LastName" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="PhoneNum" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="Gender" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="Email" maxOccurs="1" minOccurs="0"
+     		type="string" />
+
+     	<element name="Username" maxOccurs="1" minOccurs="0"
+     		type="string" />
+    </sequence>
+    </complexType>
+</schema>

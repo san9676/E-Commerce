@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Products="http://www.example.org/Products" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_qEqZIdp2Eey1cLkC0cO2qg" name="es_bs_productmanagement_sh.ProductsDF" type="dataformat:DataFormat">
+  <imports xmi:id="_rwQZINvzEey1cLkC0cO2qg" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/ProductManagement.xsd" namespace="http://www.eniquesolution.com/E-Commerce/ProductManagement"/>
+  <imports xmi:id="_1ipdYAQNEe24nao3C9OitQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/Products"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_qEsOUNp2Eey1cLkC0cO2qg" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat each character entered as a potential column separator" lineSeparator="Carriage Return/Line Feed (windows)" fillCharacter="Space" schemaElementQName="Products:Products" lineLength="50" fieldOffsetsStr="Product(0,0)">
+    <fieldOffsets xmi:id="_1j-6IAQNEe24nao3C9OitQ" name="Product"/>
+  </jndi:configuration>
+</jndi:namedResource>

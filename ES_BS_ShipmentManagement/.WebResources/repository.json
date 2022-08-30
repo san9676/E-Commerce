@@ -1,0 +1,17 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/es_bs_shipmentmanagement.ShipmentManagement-ShipmentManagement.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_bs_shipmentmanagement.ShipmentMgnt-ShipmentMgnt.json",
+            "type": "generated"
+        }
+    ]
+}

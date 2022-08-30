@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolution.com/E-Commerce/CommonFramework" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/CommonFramework">
+          
+  
+  
+  <complexType name="LogExceptionHandlerType">
+                	
+    
+    
+    <sequence>
+      		
+      <element minOccurs="0" name="ApplictionName" type="string"/>
+      		
+      <element minOccurs="0" name="ProcessName" type="string"/>
+      		
+      <element name="LogType" type="string"/>
+          	
+      <element name="TransactionID" type="string"/>
+      		
+      <element name="CorrelationID" type="string"/>
+      		
+      <element minOccurs="0" name="MessageType" type="string"/>
+          	
+      <element minOccurs="0" name="LogMessage" type="string"/>
+      		
+      <element minOccurs="0" name="Timestamp" type="string"/>
+      		
+      <element minOccurs="0" name="Payload" type="string"/>
+      
+      <element name="Exception" type="tns:ExceptionType" minOccurs="0"/>
+          
+    </sequence>
+      
+  </complexType>
+          
+
+        
+
+    
+
+
+  
+  <element name="LogExceptionHandler" type="tns:LogExceptionHandlerType"/>
+    
+  <complexType name="ExceptionType">
+      	
+    <sequence>
+      		
+      <element name="MessageCode" type="string" minOccurs="0"/>
+      <element name="ExceptionMessage " type="string" minOccurs="0"/>
+     
+      <element name="StackTrace" type="string" minOccurs="0"/>
+     
+     
+        	
+    </sequence>
+      
+  </complexType>
+    
+    
+  <complexType name="EmailHandlerType">
+      	
+    <sequence>
+      <element name="username" type="string" minOccurs="0"/>
+      <element name="password" type="string" minOccurs="0"/>
+      
+	  
+      <element name="From" type="string"/>
+        		
+      <element name="To" type="string" maxOccurs="unbounded" minOccurs="1"/>
+        		
+      <element minOccurs="0" name="CC" type="string" maxOccurs="unbounded"/>
+        		
+      <element minOccurs="0" name="BCC" type="string" maxOccurs="unbounded"/>
+	  <element name="ReplyTo" type="string" minOccurs="0"/>
+      
+        		
+      <element minOccurs="0" name="Subject" type="string"/>
+	  <element name="sentData" type="string" minOccurs="0"/>
+
+
+	  <element name="BodyElement" type="tns:BodyElementType" />
+
+    </sequence>
+      
+  </complexType>
+    
+  <element name="EmailHandler" type="tns:EmailHandlerType"/>
+  
+
+  <complexType name="BodyElementType">
+  	<choice>
+  		<element name="BodyText" type="string" minOccurs="0"></element>
+  		<element name="FileName" type="string" minOccurs="0"></element>
+  	</choice>
+  </complexType>
+</schema>

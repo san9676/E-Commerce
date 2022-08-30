@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolution.com/concrete/V1/ShipmentManagement/" xmlns:tns0="http://www.example.org/ShipmentManagement" xmlns:tns1="http://www.eniquesolution.com/E-Commerce/Common" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ShipmentManagement" targetNamespace="http://www.EniqueSolution.com/concrete/V1/ShipmentManagement/">
+  <wsdl:types>
+    <xsd:schema xmlns:tns="http://www.example.org/ShipmentManagement" elementFormDefault="qualified" targetNamespace="http://www.example.org/ShipmentManagement">
+      <xsd:element name="updateShipmentReq" type="tns:updateShipmentReqType"/>
+      <xsd:element name="updateShipmentRes" type="tns:updateShipmentResType"/>
+      <xsd:complexType name="updateShipmentReqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="TrackingID" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="OrderID" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ProductID" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Status" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="SessionID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="updateShipmentResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="TrackingID" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResCode" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResMsg" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="TrackShipReq" type="tns:TrackShipReqType"/>
+      <xsd:element name="TrackShipRes" type="tns:TrackShipResType"/>
+      <xsd:complexType name="TrackShipReqType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="TrackingID" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="OrderID" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="SessionID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="TrackShipResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="TrackingID" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Status" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResCode" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResMsg" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://www.eniquesolution.com/E-Commerce/Common" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/Common">
+      <xsd:complexType name="PayloadType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="payload" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Payload" type="tns:PayloadType"/>
+      <xsd:element name="Fault" type="tns:faultType"/>
+      <xsd:complexType name="faultType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ErrorMsg" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ErrorCode" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="StackTrace" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateShipmentRequest">
+    <wsdl:part element="tns0:updateShipmentReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateShipmentResponse">
+    <wsdl:part element="tns0:updateShipmentRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateShipmentFault">
+    <wsdl:part element="tns1:Fault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="TrackShipmentRequest">
+    <wsdl:part element="tns0:TrackShipReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="TrackShipmentResponse">
+    <wsdl:part element="tns0:TrackShipRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="TrackShipmentFault">
+    <wsdl:part element="tns1:Fault" name="fault"/>
+  </wsdl:message>
+  <wsdl:portType name="ShipmentManagement">
+    <wsdl:operation name="UpdateShipment">
+      <wsdl:input message="tns:UpdateShipmentRequest"/>
+      <wsdl:output message="tns:UpdateShipmentResponse"/>
+      <wsdl:fault message="tns:UpdateShipmentFault" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="TrackShipment">
+      <wsdl:input message="tns:TrackShipmentRequest"/>
+      <wsdl:output message="tns:TrackShipmentResponse"/>
+      <wsdl:fault message="tns:TrackShipmentFault" name="fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:ShipmentManagement">
+    <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+    <jms:binding messageFormat="text"/>
+    <wsdl:operation name="UpdateShipment">
+      <soap:operation soapAction="UpdateShipment" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TrackShipment">
+      <soap:operation soapAction="TrackShipment" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ShipmentManagement">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="ShipmentManagementSOAP">
+      <soap:address location=""/>
+      <jms:connectionFactory/>
+      <jms:targetAddress destination="queue">UserOnBoarding.CreateAccount.q</jms:targetAddress>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

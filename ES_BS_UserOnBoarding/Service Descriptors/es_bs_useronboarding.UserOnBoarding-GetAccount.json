@@ -1,0 +1,63 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "GetAccount",
+    "description" : "getaccount service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/getaccount" : {
+      "get" : {
+        "summary" : "getCreateAccount",
+        "description" : "getCreateAccount",
+        "operationId" : "get-getaccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Username",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "SessionId",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetDeatils to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetDeatils"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "GetDeatils" : {
+      "type" : "object",
+      "required" : [ "Status", "ResMsg", "Username", "ResData" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "ResData" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolution.com/E-Commerce/ProductManagement" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/ProductManagement">
+                    
+  
+  
+  
+  
+  
+  
+                  
+  
+  
+  
+  
+  
+  
+                  
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="ProductsType">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+
+
+
+
+
+
+
+
+    	<element maxOccurs="1" minOccurs="0" name="ProductID"
+    		type="string">
+    	</element>
+
+		<element name="ProductName" type="string" maxOccurs="1" minOccurs="0"></element>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	<element maxOccurs="1" minOccurs="0" name="BrandID"
+    		type="string">
+    	</element>
+
+
+
+
+
+
+
+
+    	<element maxOccurs="1" minOccurs="0" name="CategoryID"
+    		type="string">
+    	</element>
+
+
+
+
+
+
+
+
+    	<element maxOccurs="1" minOccurs="0" name="ModelYear"
+    		type="string">
+    	</element>
+
+
+
+
+
+
+
+
+    	<element maxOccurs="1" minOccurs="0" name="ListPrice"
+    		type="string">
+    	</element>
+
+
+
+
+
+
+
+
+    	
+    </sequence>
+
+
+
+
+
+
+
+
+  </complexType>
+                    
+  
+  
+  
+  
+  
+  
+  
+  <element name="GetProductsByCategoryReq" type="tns:GetProductsByCategoryReqType">
+    </element>
+                    
+    
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="GetProductsByCategoryReqType">
+                                    	
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="SessionId" type="string"/>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="CategoryID" type="string"/>
+                                                    	
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                    
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                    
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="GetIndividualProductReqType">
+                                    	
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="SessionId" type="string"/>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="ProductID" type="string"/>
+                                                    	
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                    
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                    
+    
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="GetProductResType">
+                                    	
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="unbounded" minOccurs="0" name="Product" type="tns:ProductsType"/>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="ResCode" type="string">
+    		</element>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="ResMsg" type="string"/>
+                                                    	
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                    
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                    
+  
+  
+  
+  
+  
+  
+  
+  <element name="GetIndividualProductReq" type="tns:GetIndividualProductReqType">
+    </element>
+                    
+  
+  
+  
+  
+  
+  
+  
+  <element name="GetIndividualProductRes" type="tns:GetProductResType">
+  </element>
+    
+  <complexType name="AddProductsReqType">
+                                    	
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="FileContent" type="string"/>
+                                                    	
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                    
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                    
+    
+  
+  
+  
+  
+  
+  
+  
+  <complexType name="AddProductsResType">
+                                    	
+    
+    
+    
+    
+    
+    
+    
+    <sequence>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="ResCode" type="string"/>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="ResMsg" type="string"/>
+                                                    		
+      
+      
+      
+      
+      
+      
+      
+      <element maxOccurs="1" minOccurs="0" name="NoOfProds" type="string"/>
+                                                    	
+    
+    
+    
+    
+    
+    
+    
+    </sequence>
+                                    
+  
+  
+  
+  
+  
+  
+  
+  </complexType>
+                    
+    
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+                  
+  
+  
+  
+  
+  
+  
+  
+  <element name="Products" type="tns:ProductsType"/>
+                
+
+  
+  
+  
+      
+
+
+
+
+
+
+  
+  <element name="GetAllProductRes" type="tns:GetProductResType"/>
+    
+  <element name="GetProductsByCategoryRes" type="tns:GetProductResType">
+  </element>
+    
+  <element name="AddProductsReq" type="tns:AddProductsReqType"/>
+    
+  <element name="AddProductsRes" type="tns:AddProductsResType"/>
+    
+  <complexType name="GetAllProductsReqType">
+      	
+    <sequence>
+        		
+      <element name="SessionId" type="string"/>
+        	
+    </sequence>
+      
+  </complexType>
+    
+  <element name="GetAllProductsReq" type="tns:GetAllProductsReqType"/>
+    
+  <complexType name="UpdateProductsReqType">
+      	
+    <sequence>
+        		
+      <element maxOccurs="unbounded" minOccurs="0" name="products" type="tns:ProductsType"/>
+        	
+    </sequence>
+      
+  </complexType>
+    
+  <element name="updateProductsReq" type="tns:UpdateProductsReqType"/>
+    
+  <complexType name="updateProductsResType">
+      	
+    <sequence>
+        		
+      <element maxOccurs="1" minOccurs="0" name="ResCode" type="string"/>
+        		
+      <element maxOccurs="1" minOccurs="0" name="ResMsg" type="string"/>
+        		
+      <element maxOccurs="unbounded" minOccurs="0" name="ProductIds" type="string"/>
+        	
+    </sequence>
+      
+  </complexType>
+    
+  <complexType name="DeleteProductsReqType">
+      	
+    <sequence>
+        		
+      <element maxOccurs="unbounded" minOccurs="0" name="ProductsId" type="string">
+  		</element>
+        		
+      <element maxOccurs="1" minOccurs="0" name="SessionId" type="string"/>
+        	
+    </sequence>
+      
+  </complexType>
+    
+  <complexType name="DeleteProductsResType">
+      	
+    <sequence>
+        		
+      <element maxOccurs="unbounded" minOccurs="0" name="DeletedProducts" type="string"/>
+        		
+      <element maxOccurs="1" minOccurs="0" name="ResCode" type="string"/>
+        		
+      <element maxOccurs="1" minOccurs="0" name="ResMsg" type="string"/>
+        	
+    </sequence>
+      
+  </complexType>
+    
+  <element name="updateProductsRes" type="tns:updateProductsResType"/>
+    
+  <element name="DeleteProductsReq" type="tns:DeleteProductsReqType"/>
+    
+  <element name="DeleteProductsRes" type="tns:DeleteProductsResType"/>
+    
+  <complexType name="ProductsReqType">
+      	
+    <sequence>
+        		
+      <element maxOccurs="unbounded" minOccurs="0" ref="tns:Products"/>
+        	
+    </sequence>
+      
+  </complexType>
+    
+  <element name="ProductsReqType" type="tns:ProductsReqType"/>
+    
+  <element name="ProductsIDs" type="tns:ProductsIDs"/>
+    
+  <complexType name="ProductsIDs">
+      	
+    <sequence>
+        		
+      <element maxOccurs="unbounded" minOccurs="0" name="ProductsID"
+      	type="string" />
+
+    </sequence>
+      
+  </complexType>
+      
+  <complexType name="GetIndividualProductResArray">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="GetIndividualProductRes" type="tns:GetProductResType"/>
+    </sequence>
+  </complexType>
+      
+  <element name="GetIndividualProductResArray" type="tns:GetIndividualProductResArray"/>
+  
+</schema>

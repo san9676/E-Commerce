@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.eniquesolution.com/E-Commerce/Common" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolution.com/E-Commerce/Common">
+
+    <complexType name="PayloadType">
+    	<sequence>
+    		<element name="payload" type="string" minOccurs="0" maxOccurs="unbounded"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Payload" type="tns:PayloadType"></element>
+
+    <element name="Fault" type="tns:faultType"></element>
+    
+    <complexType name="faultType">
+    	<sequence>
+    		<element name="ErrorMsg" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ErrorCode" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="StackTrace" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

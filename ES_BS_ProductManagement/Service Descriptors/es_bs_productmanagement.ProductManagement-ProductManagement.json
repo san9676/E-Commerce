@@ -1,0 +1,176 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ProductManagement",
+    "description" : "ProductManagement service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/GetAllProducts" : {
+      "get" : {
+        "summary" : "getProductManagement",
+        "description" : "getProductManagement",
+        "operationId" : "get-GetAllProducts",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "SessionId",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetAllProductRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetAllProductRes"
+            }
+          }
+        }
+      }
+    },
+    "/GetProductsCategory" : {
+      "get" : {
+        "summary" : "getProductManagement",
+        "description" : "getProductManagement",
+        "operationId" : "get-GetProductsCategory",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "CategoryId",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "SessionId",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetProductsByCategoryRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetProductsByCategoryRes"
+            }
+          }
+        }
+      }
+    },
+    "/GetIndividualProduct" : {
+      "get" : {
+        "summary" : "getProductManagement",
+        "description" : "getProductManagement",
+        "operationId" : "get-GetIndividualProduct",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "ProductId",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "SesionId",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetIndividualProductRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetIndividualProductRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "GetIndividualProductRes" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Product",
+            "uniqueItems" : false
+          }
+        },
+        "ResCode" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetAllProductRes" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Product",
+            "uniqueItems" : false
+          }
+        },
+        "ResCode" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Product" : {
+      "type" : "object",
+      "properties" : {
+        "ProductID" : {
+          "type" : "string"
+        },
+        "ProductName" : {
+          "type" : "string"
+        },
+        "BrandID" : {
+          "type" : "string"
+        },
+        "CategoryID" : {
+          "type" : "string"
+        },
+        "ModelYear" : {
+          "type" : "string"
+        },
+        "ListPrice" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetProductsByCategoryRes" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Product",
+            "uniqueItems" : false
+          }
+        },
+        "ResCode" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

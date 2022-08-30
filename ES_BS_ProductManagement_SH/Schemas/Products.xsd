@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Products" xmlns:tns="http://www.example.org/Products" elementFormDefault="qualified">
+
+    <element name="Products" type="tns:ProductsType"></element>
+    
+    <complexType name="ProductsType">
+    	<sequence>
+    		<element name="Product" type="tns:ProductType" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="ProductType">
+    	<sequence>
+    		<element name="ProductID" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ProductName" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="BrandID" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CategoryID" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ModelYear" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ListPrice" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="ProductIDs" type="tns:ProductIDsType"></element>
+    
+    <complexType name="ProductIDsType">
+    	<sequence>
+    		<element name="ProductID" type="string"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ProductIDType">
+    	<sequence>
+    		<element name="ProductId" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

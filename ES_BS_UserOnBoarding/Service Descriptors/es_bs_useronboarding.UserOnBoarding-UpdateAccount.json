@@ -1,0 +1,86 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "UpdateAccount",
+    "description" : "CreateAccount service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/updateaccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-updateaccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/UpdateAccountReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a UpdateAccountRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateAccountRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "UpdateAccountRes" : {
+      "type" : "object",
+      "required" : [ "Status", "ResMsg", "Username" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "UpdateAccountReq" : {
+      "type" : "object",
+      "required" : [ "Username" ],
+      "properties" : {
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "PhoneNum" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Username" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

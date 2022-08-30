@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:source="bw.rest" xmlns:tns="http://xmlns.example.com/ProductManagement/parameters" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://xmlns.example.com/ProductManagement/parameters">
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <xs:element name="GetAllProductsGetParameters">
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <xs:complexType>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <xs:sequence>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <xs:element maxOccurs="1" minOccurs="0" name="SessionId" type="xs:string"/>
+                                                                                      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      </xs:sequence>
+                                                                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </xs:complexType>
+                                          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </xs:element>
+                    
+
+    
+  
+  
+  
+  
+  
+  
+  
+  <xs:element name="GetProductsCategoryGetParameters">
+                                
+    
+    
+    
+    
+    
+    
+    <xs:complexType>
+                                                
+      
+      
+      
+      
+      
+      
+      <xs:sequence>
+                                                                
+        
+        
+        
+        
+        
+        
+        <xs:element maxOccurs="1" minOccurs="0" name="SessionId" type="xs:string"/>
+                                                                        
+        
+        
+        
+        
+        
+        
+        <xs:element maxOccurs="1" minOccurs="0" name="CategoryId" type="xs:string"/>
+                                                                    
+      
+      
+      
+      
+      
+      
+      </xs:sequence>
+                                              
+    
+    
+    
+    
+    
+    
+    </xs:complexType>
+                              
+  
+  
+  
+  
+  
+  
+  </xs:element>
+                
+
+
+
+    
+  
+  
+  
+  <xs:element name="GetIndividualProductGetParameters">
+                
+    
+    
+    <xs:complexType>
+                        
+      
+      
+      <xs:sequence>
+                                
+        
+        
+        <xs:element maxOccurs="1" minOccurs="0" name="SesionId" type="xs:string"/>
+                                        
+        
+        
+        <xs:element maxOccurs="1" minOccurs="0" name="ProductId" type="xs:string"/>
+                                    
+      
+      
+      </xs:sequence>
+                      
+    
+    
+    </xs:complexType>
+              
+  
+  
+  </xs:element>
+        
+
+
+
+</xs:schema>

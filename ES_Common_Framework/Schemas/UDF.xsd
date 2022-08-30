@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UDF" elementFormDefault="qualified" xmlns:can="http://www.example.org/UDF" xmlns:Q1="http://www.example.org/can/">
+    <import namespace="http://www.example.org/can/" schemaLocation="can.xsd"></import>
+    <element name="UDFs" type="can:UDFsType">
+
+</element>
+          
+    
+  
+  
+  <complexType name="UDFsType">
+
+
+
+  	<sequence>
+
+
+
+<element ref="Q1:UDF" maxOccurs="unbounded" minOccurs="0"></element>
+
+  		<element name="UDF" maxOccurs="unbounded" minOccurs="0"
+  			type="can:UDFType">
+
+  		</element>
+
+  		
+  	</sequence>
+
+
+
+  </complexType>
+
+
+
+
+
+
+
+
+
+
+
+  <element name="UDF" type="can:UDFType"></element>
+
+  <complexType name="UDFType">
+  	<sequence>
+  		<element name="UDSElement" type="can:UDSElementType"></element>
+  	</sequence>
+
+  	<attribute name="name" type="string"></attribute>
+  </complexType>
+
+  <complexType name="UDSElementType">
+    	<sequence>
+    		<element name="Discription" type="can:DiscriptionType"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="DiscriptionType">
+    	<sequence>
+    		<element name="value" type="can:valuetype"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="UDSElement" type="can:UDSElementType"></element>
+
+    <element name="Discription" type="can:DiscriptionType"></element>
+
+    <complexType name="valuetype">
+    	
+    	<attribute use="required" name="searchType"
+    				type="string">
+    			</attribute>
+    			<attribute use="required" name="locale" type="string"></attribute>
+    			<attribute use="required" name="searchTarget"
+    				type="string">
+    			</attribute>
+    			<attribute use="required" name="searchValue"
+    				type="string">
+    			</attribute>
+    </complexType>
+
+    <complexType name="sampletype">
+    	<sequence>
+    		<element name="test" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

@@ -1,0 +1,372 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "OrderManagment",
+    "description" : "OrderManagment service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/UpdateOrder" : {
+      "post" : {
+        "summary" : "postOrderManagment",
+        "description" : "postOrderManagment",
+        "operationId" : "post-UpdateOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/updateOrderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a updateOrderRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/updateOrderRes"
+            }
+          }
+        }
+      }
+    },
+    "/CancelOrder" : {
+      "post" : {
+        "summary" : "postOrderManagment",
+        "description" : "postOrderManagment",
+        "operationId" : "post-CancelOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/cancelOrderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a cancelOrderRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/cancelOrderRes"
+            }
+          }
+        }
+      }
+    },
+    "/GetOrderHistory" : {
+      "get" : {
+        "summary" : "getOrderManagment",
+        "description" : "getOrderManagment",
+        "operationId" : "get-GetOrderHistory",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "SessionID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetOrderHistory to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetOrderHistory"
+            }
+          }
+        }
+      }
+    },
+    "/CreateOrder" : {
+      "post" : {
+        "summary" : "postOrderManagment",
+        "description" : "postOrderManagment",
+        "operationId" : "post-CreateOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CreateOrderReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CreateOrderRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CreateOrderRes"
+            }
+          }
+        }
+      }
+    },
+    "/GetOrder" : {
+      "get" : {
+        "summary" : "getOrderManagment",
+        "description" : "getOrderManagment",
+        "operationId" : "get-GetOrder",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "OrderID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "SessionID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetOrderRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetOrderRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Orders" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "CUSTOMERID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "Quantity" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "DISCOUNT" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "ORDER_DATE" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        }
+      }
+    },
+    "OrderDetailsType" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "CUSTOMERID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "Quantity" : {
+          "type" : "string"
+        },
+        "LIST_PRICE" : {
+          "type" : "string"
+        },
+        "DISCOUNT" : {
+          "type" : "string"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "ORDER_DATE" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        }
+      }
+    },
+    "updateOrderRes" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "updateOrderReq" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "CUSTOMERID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "Quantity" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "LIST_PRICE" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "DISCOUNT" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "ORDER_STATUS" : {
+          "type" : "string"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SHIPPED_DATE" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateOrderReq" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "CUSTOMERID" : {
+          "type" : "string"
+        },
+        "PRODUCT_ID" : {
+          "type" : "string"
+        },
+        "Quantity" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "LIST_PRICE" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "DISCOUNT" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "REQUIRED_DATE" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "cancelOrderRes" : {
+      "type" : "object",
+      "properties" : {
+        "orderID" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateOrderRes" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetOrderRes" : {
+      "type" : "object",
+      "properties" : {
+        "Order" : {
+          "$ref" : "#/definitions/OrderDetailsType"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetOrderHistory" : {
+      "type" : "object",
+      "properties" : {
+        "Orders" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Orders",
+            "uniqueItems" : false
+          }
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        }
+      }
+    },
+    "cancelOrderReq" : {
+      "type" : "object",
+      "properties" : {
+        "OrderID" : {
+          "type" : "string"
+        },
+        "SesionID" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

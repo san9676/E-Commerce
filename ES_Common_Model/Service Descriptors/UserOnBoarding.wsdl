@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolution.com/abstarct/UserOnBoarding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://www.eniquesolution.com/E-Commerce/UserOnBoarding" name="UserOnBoarding" targetNamespace="http://www.EniqueSolution.com/abstarct/UserOnBoarding" xmlns:xsd2="http://www.eniquesolution.com/E-Commerce/Common">
+                  
+  
+  
+  
+  
+  
+  
+  
+  <wsdl:types>
+                                  
+    
+    
+    
+    
+    
+    
+    
+    <xsd:schema>
+                                                  	
+      
+      
+      
+      
+      
+      
+      
+      <xsd:import namespace="http://www.eniquesolution.com/E-Commerce/UserOnBoarding" schemaLocation="../Schemas/UserOnBoarding.xsd">
+  	</xsd:import>
+
+
+
+
+
+
+
+      <xsd:import
+      	namespace="http://www.eniquesolution.com/E-Commerce/Common"
+      	schemaLocation="../Schemas/Common.xsd">
+      </xsd:import></xsd:schema>
+                              
+  
+  
+        
+    
+    
+    
+    <xsd:schema targetNamespace="http://www.EniqueSolution.com/abstarct/UserOnBoarding">
+                                	
+      
+      
+      
+      <xsd:element name="UpdateAccount">
+                                        		
+        
+        
+        
+        <xsd:complexType>
+                                                			
+          
+          
+          
+          <xsd:sequence>
+                                                        				
+            
+            
+            
+            <xsd:element name="in" type="xsd:string"/>
+                                                        			
+          
+          
+          
+          </xsd:sequence>
+                                                		
+        
+        
+        
+        </xsd:complexType>
+                                        	
+      
+      
+      
+      </xsd:element>
+                                	
+      
+      
+      
+      <xsd:element name="UpdateAccountResponse">
+                                        		
+        
+        
+        
+        <xsd:complexType>
+                                                			
+          
+          
+          
+          <xsd:sequence>
+                                                        				
+            
+            
+            
+            <xsd:element name="out" type="xsd:string"/>
+                                                        			
+          
+          
+          
+          </xsd:sequence>
+                                                		
+        
+        
+        
+        </xsd:complexType>
+                                        	
+      
+      
+      
+      </xsd:element>
+                  
+      
+      <xsd:element name="GetAccountDetails">
+                      	
+        
+        <xsd:complexType>
+                          		
+          
+          <xsd:sequence>
+                              			
+            
+            <xsd:element name="in" type="xsd:string"/>
+                              		
+          
+          </xsd:sequence>
+                          	
+        
+        </xsd:complexType>
+                      
+      
+      </xsd:element>
+                  
+      
+      <xsd:element name="GetAccountDetailsResponse">
+                      	
+        
+        <xsd:complexType>
+                          		
+          
+          <xsd:sequence>
+                              			
+            
+            <xsd:element name="out" type="xsd:string"/>
+                              		
+          
+          </xsd:sequence>
+                          	
+        
+        </xsd:complexType>
+                      
+      
+      </xsd:element>
+                  
+      
+      <xsd:element name="DeactivateAccount">
+                      	
+        
+        <xsd:complexType>
+                          		
+          
+          <xsd:sequence>
+                              			
+            
+            <xsd:element name="in" type="xsd:string"/>
+                              		
+          
+          </xsd:sequence>
+                          	
+        
+        </xsd:complexType>
+                      
+      
+      </xsd:element>
+                  
+      
+      <xsd:element name="DeactivateAccountResponse">
+                      	
+        
+        <xsd:complexType>
+                          		
+          
+          <xsd:sequence>
+                              			
+            
+            <xsd:element name="out" type="xsd:string"/>
+                              		
+          
+          </xsd:sequence>
+                          	
+        
+        </xsd:complexType>
+                      
+      
+      </xsd:element>
+
+
+      <xsd:element name="CreateAccountFault">
+      	<xsd:complexType>
+      		<xsd:sequence>
+
+      			<xsd:element name="CreateAccountFault"
+      				type="xsd:string">
+      			</xsd:element>
+      		</xsd:sequence>
+      	</xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+                    
+  
+  
+  
+  </wsdl:types>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <wsdl:message name="CreateAccountRequest">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <wsdl:part element="xsd1:CreateAccountReq" name="parameters"/>
+                                  
+  
+  
+  
+  
+  
+  
+  
+  </wsdl:message>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <wsdl:message name="CreateAccountResponse">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <wsdl:part element="xsd1:CreateAccountRes" name="parameters"/>
+                                  
+  
+  
+  
+  
+  
+  
+  
+  </wsdl:message>
+          
+  
+  
+  
+  <wsdl:message name="UpdateAccountRequest">
+                  	
+    
+    
+    
+    <wsdl:part element="xsd1:UpdateAccountReq" name="parameters"/>
+                  
+  
+  
+  
+  </wsdl:message>
+          
+  
+  
+  
+  <wsdl:message name="UpdateAccountResponse">
+                  	
+    
+    
+    
+    <wsdl:part element="xsd1:UpdateAccountRes" name="parameters"/>
+                  
+  
+  
+  
+  </wsdl:message>
+      
+  
+  <wsdl:message name="GetAccountDetailsRequest">
+          	
+    
+    <wsdl:part element="xsd1:GetAccDetailsReq" name="parameters"/>
+          
+  
+  </wsdl:message>
+      
+  
+  <wsdl:message name="GetAccountDetailsResponse">
+          	
+    
+    <wsdl:part element="xsd1:GetAccDetailsRes" name="parameters"/>
+          
+  
+  </wsdl:message>
+      
+  
+  <wsdl:message name="DeactivateAccountRequest">
+          	
+    
+    <wsdl:part element="xsd1:DeactivateAccReq" name="parameters"/>
+          
+  
+  </wsdl:message>
+      
+  
+  <wsdl:message name="DeactivateAccountResponse">
+          	
+    
+    <wsdl:part element="xsd1:DeactivateAccRes" name="parameters"/>
+          
+  
+  </wsdl:message>
+
+
+  <wsdl:message name="CreateAccountFault">
+  	<wsdl:part name="parameters" element="xsd2:Fault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UserOnBoarding">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <wsdl:operation name="CreateAccount">
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <wsdl:input message="tns:CreateAccountRequest"/>
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <wsdl:output message="tns:CreateAccountResponse"/>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+            <wsdl:fault name="fault" message="tns:CreateAccountFault"></wsdl:fault>
+        </wsdl:operation>
+                    
+    
+    
+    
+    <wsdl:operation name="UpdateAccount">
+                            	
+      
+      
+      
+      <wsdl:input message="tns:UpdateAccountRequest"/>
+                            	
+      
+      
+      
+      <wsdl:output message="tns:UpdateAccountResponse"/>
+                            
+    
+    
+    
+    </wsdl:operation>
+            
+    
+    <wsdl:operation name="GetAccountDetails">
+                	
+      
+      <wsdl:input message="tns:GetAccountDetailsRequest"/>
+                	
+      
+      <wsdl:output message="tns:GetAccountDetailsResponse"/>
+                
+    
+    </wsdl:operation>
+            
+    
+    <wsdl:operation name="DeactivateAccount">
+                	
+      
+      <wsdl:input message="tns:DeactivateAccountRequest"/>
+                	
+      
+      <wsdl:output message="tns:DeactivateAccountResponse"/>
+                
+    
+    </wsdl:operation>
+          
+  
+  </wsdl:portType>
+                  
+  
+  
+  
+  
+  
+  
+  
+  <wsdl:binding name="UserOnBoardingSOAP" type="tns:UserOnBoarding">
+          	
+    
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+          	
+    
+    <wsdl:operation name="CreateAccount">
+              		
+      
+      <soap:operation soapAction="http://www.EniqueSolution.com/abstarct/UserOnBoarding/CreateAccount"/>
+              		
+      
+      <wsdl:input>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:input>
+              		
+      
+      <wsdl:output>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:output>
+              	
+    
+    </wsdl:operation>
+          	
+    
+    <wsdl:operation name="UpdateAccount">
+              		
+      
+      <soap:operation soapAction="http://www.EniqueSolution.com/abstarct/UserOnBoarding/UpdateAccount"/>
+              		
+      
+      <wsdl:input>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:input>
+              		
+      
+      <wsdl:output>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:output>
+              	
+    
+    </wsdl:operation>
+          	
+    
+    <wsdl:operation name="GetAccountDetails">
+              		
+      
+      <soap:operation soapAction="http://www.EniqueSolution.com/abstarct/UserOnBoarding/GetAccountDetails"/>
+              		
+      
+      <wsdl:input>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:input>
+              		
+      
+      <wsdl:output>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:output>
+              	
+    
+    </wsdl:operation>
+          	
+    
+    <wsdl:operation name="DeactivateAccount">
+              		
+      
+      <soap:operation soapAction="http://www.EniqueSolution.com/abstarct/UserOnBoarding/DeactivateAccount"/>
+              		
+      
+      <wsdl:input>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:input>
+              		
+      
+      <wsdl:output>
+                  			
+        
+        <soap:body use="literal"/>
+                  		
+      
+      </wsdl:output>
+              	
+    
+    </wsdl:operation>
+          
+  
+  </wsdl:binding>
+      
+  
+  <wsdl:service name="UserOnBoarding">
+                                    
+    
+    
+    
+    
+    
+    
+    
+    <wsdl:port binding="tns:UserOnBoardingSOAP" name="UserOnBoardingSOAP">
+                                                      
+      
+      
+      
+      
+      
+      
+      
+      <soap:address location="http://www.example.org/"/>
+                                                    
+    
+    
+    
+    
+    
+    
+    
+    </wsdl:port>
+                                  
+  
+  
+  
+  
+  
+  
+  
+  </wsdl:service>
+                
+
+
+
+
+
+
+
+</wsdl:definitions>

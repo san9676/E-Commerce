@@ -1,0 +1,86 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderManagement-OrderManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderManagement-OrderManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderManagement-OrderManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderMangement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderMangement.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_OrderManagement/Service Descriptors/OrderManagement.OrderMangement-OrderManagment.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    }
+]}

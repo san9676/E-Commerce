@@ -1,0 +1,31 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/ES_BS_ShipmentManagement/Service Descriptors/es_bs_shipmentmanagement.ShipmentManagement-ShipmentManagement.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ShipmentManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_ShipmentManagement/Service Descriptors/es_bs_shipmentmanagement.ShipmentMgnt-ShipmentMgnt.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_ShipmentManagement_SH/Schemas/ShipmentManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ShipmentManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_ShipmentManagement/Service Descriptors/es_bs_shipmentmanagement.ShipmentMgnt-ShipmentMgnt.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_ShipmentManagement_SH/Schemas/ShipmentManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ShipmentManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_ShipmentManagement/Service Descriptors/es_bs_shipmentmanagement.ShipmentMgnt-ShipmentMgnt.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_ShipmentManagement_SH/Schemas/ShipmentManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ShipmentManagement"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_ShipmentManagement/Service Descriptors/es_bs_shipmentmanagement.ShipmentMgnt-ShipmentMgnt.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_ShipmentManagement_SH/Schemas/ShipmentManagement.xsd",
+        "xsdSchemaTargetNamespace": "http://www.example.org/ShipmentManagement"
+    }
+]}

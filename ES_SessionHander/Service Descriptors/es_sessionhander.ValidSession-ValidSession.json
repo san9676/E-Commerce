@@ -1,0 +1,71 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ValidSession",
+    "description" : "ValidSession service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/validsession" : {
+      "post" : {
+        "summary" : "postValidSession",
+        "description" : "postValidSession",
+        "operationId" : "post-validsession",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/ValidateSessionReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a ValidateSessionRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/ValidateSessionRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "ValidateSessionReq" : {
+      "type" : "object",
+      "required" : [ "SessionID", "username", "ReqTimestamp", "TransactionID" ],
+      "properties" : {
+        "username" : {
+          "type" : "string"
+        },
+        "ReqTimestamp" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        },
+        "TransactionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ValidateSessionRes" : {
+      "type" : "object",
+      "required" : [ "isSessionExpired", "username" ],
+      "properties" : {
+        "username" : {
+          "type" : "string"
+        },
+        "isSessionExpired" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

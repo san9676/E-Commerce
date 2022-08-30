@@ -1,0 +1,25 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/es_bs_useronboarding.CreateAccount-CreateAccount.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_bs_useronboarding.UserOnBoarding-CreateAccount.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_bs_useronboarding.UserOnBoarding-UpdateAccount.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_bs_useronboarding.UserOnBoarding-GetAccount.json",
+            "type": "generated"
+        }
+    ]
+}

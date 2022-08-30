@@ -1,0 +1,132 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ShipmentMgnt",
+    "description" : "ShipmentMgnt service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/trackShipment" : {
+      "post" : {
+        "summary" : "postShipmentMgnt",
+        "description" : "postShipmentMgnt",
+        "operationId" : "post-trackShip",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/TrackShipReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a TrackShipRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/TrackShipRes"
+            }
+          }
+        }
+      }
+    },
+    "/updateShipment" : {
+      "post" : {
+        "summary" : "postShipmentMgnt",
+        "description" : "postShipmentMgnt",
+        "operationId" : "post-updateShipment",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/updateShipmentReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a updateShipmentRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/updateShipmentRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "updateShipmentRes" : {
+      "type" : "object",
+      "properties" : {
+        "TrackingID" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "TrackShipReq" : {
+      "type" : "object",
+      "properties" : {
+        "TrackingID" : {
+          "type" : "string"
+        },
+        "OrderID" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "updateShipmentReq" : {
+      "type" : "object",
+      "properties" : {
+        "TrackingID" : {
+          "type" : "string"
+        },
+        "OrderID" : {
+          "type" : "string"
+        },
+        "ProductID" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "TrackShipRes" : {
+      "type" : "object",
+      "properties" : {
+        "TrackingID" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

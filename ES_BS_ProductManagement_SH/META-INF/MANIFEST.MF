@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ES_BS_ProductManagement_SH Module
+Bundle-SymbolicName: ES_BS_ProductManagement_SH
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-SharedModule: META-INF/module.bwm
+TIBCO-BW-Edition: bwe
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)"
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Provide-Capability: com.tibco.bw.module; name="ES_BS_ProductManagement_SH"; version:Version="1.0.0",
+ com.tibco.bw.schemas; ns="http://www.eniquesolution.com/E-Commerce/ProductManagement",
+ com.tibco.bw.schemas; ns="http://www.example.org/Products",
+ com.tibco.bw.wsdls; ns="http://www.EniqueSolution.com/concrete/V2/ProductManagement",
+ com.tibco.bw.resources; name="es_bs_productmanagement_sh"
+TIBCO-BW-Version: 6.8.0 V55 2021-11-10

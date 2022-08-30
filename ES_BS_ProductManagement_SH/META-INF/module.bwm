@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_rBZxMNpVEey1cLkC0cO2qg" targetNamespace="http://tns.tibco.com/bw/composite/ES_BS_ProductManagement_SH" name="ES_BS_ProductManagement_SH" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_rF52sNpVEey1cLkC0cO2qg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rF-vMNpVEey1cLkC0cO2qg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rGBLcNpVEey1cLkC0cO2qg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rGDAoNpVEey1cLkC0cO2qg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rGFc4NpVEey1cLkC0cO2qg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rGJHQNpVEey1cLkC0cO2qg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rGMKkNpVEey1cLkC0cO2qg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rGOm0NpVEey1cLkC0cO2qg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rGRqINpVEey1cLkC0cO2qg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Y520QBSxEe2rzeKFFGCFnw" name="FileErrorPath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Y6AlQBSxEe2rzeKFFGCFnw" name="NoOfRecords" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Y6H6ABSxEe2rzeKFFGCFnw" name="TimeInterval" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_CGCW0BS0Ee2rzeKFFGCFnw" name="FilePolling_Interval" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WlI_oBSxEe2rzeKFFGCFnw" name="/InboundFiles/AddproductsInput" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WlSwoBSxEe2rzeKFFGCFnw" name="/InboundFiles/UpdateProductInput" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WlascBSxEe2rzeKFFGCFnw" name="/InboundFiles/DeleteProducts" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WlhaIBSxEe2rzeKFFGCFnw" name="/InboundFiles/CopiedFiles" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XkbSYBSxEe2rzeKFFGCFnw" name="/OutBoundFiles/DeleteProductOutbound" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XkinIBSxEe2rzeKFFGCFnw" name="/OutBoundFiles/UpdateProductOutbound" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XkrKABSxEe2rzeKFFGCFnw" name="/OutBoundFiles/AddProductOutbound" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+</sca:composite>

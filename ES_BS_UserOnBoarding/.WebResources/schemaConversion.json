@@ -1,0 +1,43 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.CreateAccount-CreateAccount.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/SessionHandler"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.UserOnBoarding-CreateAccount.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/UserOnBoarding.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/UserOnBoarding"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.UserOnBoarding-CreateAccount.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/UserOnBoarding.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/UserOnBoarding"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.UserOnBoarding-CreateAccount.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/UserOnBoarding.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/UserOnBoarding"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.UserOnBoarding-CreateAccount.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/UserOnBoarding.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/UserOnBoarding"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.UserOnBoarding-CreateAccount.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/UserOnBoarding.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/UserOnBoarding"
+    },
+    {
+        "jsonSchemaLocation": "/ES_BS_UserOnBoarding/Service Descriptors/es_bs_useronboarding.UserOnBoarding-CreateAccount.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/ES_Common_Model/Schemas/UserOnBoarding.xsd",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/UserOnBoarding"
+    }
+]}

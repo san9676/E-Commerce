@@ -1,0 +1,74 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "CreateSession",
+    "description" : "CreateSession service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/createsession" : {
+      "post" : {
+        "summary" : "postCreateSession",
+        "description" : "postCreateSession",
+        "operationId" : "post-createsession",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CreateSessionReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CreateSessionRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CreateSessionRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CreateSessionReq" : {
+      "type" : "object",
+      "required" : [ "Username", "ReqTimeStamp", "TransactionID" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "ReqTimeStamp" : {
+          "type" : "string"
+        },
+        "TransactionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateSessionRes" : {
+      "type" : "object",
+      "required" : [ "ResTimeStamp", "Username", "SessionID", "TransactionID" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "ResTimeStamp" : {
+          "type" : "string"
+        },
+        "TransactionID" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

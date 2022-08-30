@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/can/" xmlns:smp="http://www.example.org/can/">
+
+    <complexType name="UDFType">
+    	<sequence>
+    		<element name="UDF">
+                <complexType>
+                  <simpleContent>
+                    <extension base="string">
+                      <attribute name="name" type="string"  />                      
+                    </extension>
+                  </simpleContent>
+                </complexType>
+              </element>
+    	</sequence>
+    </complexType>
+
+    <element name="UDF" type="smp:UDFType"></element>
+</schema>

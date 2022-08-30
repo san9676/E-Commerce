@@ -1,0 +1,72 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "ShipmentManagement",
+    "description" : "ShipmentManagement service"
+  },
+  "host" : "0.0.0.0:1098",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/trackShipment" : {
+      "post" : {
+        "summary" : "postShipmentManagement",
+        "description" : "postShipmentManagement",
+        "operationId" : "post-trackShipment",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/TrackShipReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a TrackShipRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/TrackShipRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "TrackShipReq" : {
+      "type" : "object",
+      "properties" : {
+        "TrackingID" : {
+          "type" : "string"
+        },
+        "OrderID" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "TrackShipRes" : {
+      "type" : "object",
+      "properties" : {
+        "TrackingID" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

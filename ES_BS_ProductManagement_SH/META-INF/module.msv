@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msv:DocumentRoot xmlns:msv="http://tns.tibco.com/bw/model/core/moduleSV">
+  <moduleSharedVariables>
+    <moduleSharedVariable name="AddStartRecord" type="{http://www.w3.org/2001/XMLSchema}integer" initialValueMode="none"/>
+    <moduleSharedVariable name="AddProductFile" type="{http://www.w3.org/2001/XMLSchema}string" initialValueMode="none"/>
+    <moduleSharedVariable name="UpdateStartRecord" type="{http://www.w3.org/2001/XMLSchema}integer" initialValueMode="none"/>
+    <moduleSharedVariable name="DeleteStartRecord" type="{http://www.w3.org/2001/XMLSchema}integer" initialValueMode="none"/>
+  </moduleSharedVariables>
+</msv:DocumentRoot>

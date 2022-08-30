@@ -1,0 +1,63 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Logout",
+    "description" : "Logout service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/logout" : {
+      "get" : {
+        "summary" : "getLogout",
+        "description" : "getLogout",
+        "operationId" : "get-logout",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Username",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "SessionID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "TransactionID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a LogoutRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/LogoutRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "LogoutRes" : {
+      "type" : "object",
+      "required" : [ "Status", "Username" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

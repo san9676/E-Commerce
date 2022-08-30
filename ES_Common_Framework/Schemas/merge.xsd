@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/merge" xmlns:tns="http://www.example.org/merge" elementFormDefault="qualified">
+
+    <element name="merge" type="tns:mergeType"></element>
+
+    <complexType name="mergeType">
+    	<sequence>
+    		<element name="EmailAddress">
+    			<complexType>
+    				<simpleContent>
+    					<extension base="string">
+    						<attribute name="searchType"
+    							type="string" use="required" />
+    						<attribute name="searchTarget"
+    							type="string" use="required" />
+    						<attribute name="searchValue"
+    							type="string" use="required" />
+    					</extension>
+    				</simpleContent>
+    			</complexType>
+    		</element>
+    		<element name="FirstName" type="string" />
+    		<element name="MiddleInitial" type="string" />
+    		<element name="LastName" type="string" />
+    		<element name="MobilePhone" type="string" />
+    		<element name="ZipCode" type="string" />
+    		<element name="Birthday" type="string" />
+    		<element name="Address" type="string" />
+    		<element name="Address2" type="string" />
+    		<element name="City" type="string" />
+    		<element name="SocialSecurityNumber" type="string" />
+    		<element name="OwnerAgent" type="tns:OwnerAgentType"></element>
+    		<element name="CandidateReferrer"
+    			type="tns:CandidateReferrerType">
+    		</element>
+    		<element name="UDFs" type="tns:UDFsType"></element>
+    	</sequence>
+    </complexType>
+	<complexType name="OwnerAgentType">
+				<sequence>
+                    <element name="Agent">
+                      <complexType>
+                        <sequence>
+                          <element name="EmailAddress">
+                            <complexType>
+                              <attribute name="searchType" type="string" use="required" />
+                              <attribute name="searchTarget" type="string" use="required" />
+                              <attribute name="ignoreEmpty" type="boolean" use="required" />
+                              <attribute name="searchValue" type="string" use="required" />
+                            </complexType>
+                          </element>
+                        </sequence>
+                      </complexType>
+                    </element>
+                  </sequence>
+	</complexType>
+	<complexType name="CandidateReferrerType">
+				<sequence>
+                    <element name="Candidate">
+                      <complexType>
+                        <sequence>
+                          <element name="EmailAddress">
+                            <complexType>
+                              <attribute name="searchType" type="string" use="required" />
+                              <attribute name="searchTarget" type="string" use="required" />
+                              <attribute name="ignoreEmpty" type="boolean" use="required" />
+                              <attribute name="searchValue" type="string" use="required" />
+                            </complexType>
+                          </element>
+                        </sequence>
+                      </complexType>
+                    </element>
+                  </sequence>
+	</complexType>
+	<complexType name="UDFsType">
+		<sequence>
+			<element maxOccurs="unbounded" name="UDF">
+				<complexType mixed="true">
+					<sequence minOccurs="0">
+						<element name="UDSElement">
+							<complexType>
+								<sequence>
+									<element name="Description">
+										<complexType>
+											<sequence>
+												<element
+													name="value">
+													<complexType>
+														<attribute
+															name="searchType" type="string" use="required" />
+														<attribute
+															name="locale" type="string" use="required" />
+														<attribute
+															name="searchTarget" type="string" use="required" />
+														<attribute
+															name="searchValue" type="string" use="required" />
+													</complexType>
+												</element>
+											</sequence>
+										</complexType>
+									</element>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+					<attribute name="name" type="string"
+						use="required" />
+				</complexType>
+			</element>
+		</sequence>
+		
+	</complexType>
+</schema>

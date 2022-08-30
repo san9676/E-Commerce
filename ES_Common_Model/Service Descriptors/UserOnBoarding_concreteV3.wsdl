@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolution.com/concrete/V3/UserOnBoarding" xmlns:tns0="http://www.eniquesolution.com/E-Commerce/UserOnBoarding" xmlns:tns1="http://www.eniquesolution.com/E-Commerce/Common" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserOnBoarding" targetNamespace="http://www.EniqueSolution.com/concrete/V3/UserOnBoarding">
+  <wsdl:types>
+    <xsd:schema xmlns:tns="http://www.eniquesolution.com/E-Commerce/UserOnBoarding" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/UserOnBoarding">
+      <xsd:complexType name="CreateAccountReqType">
+        <xsd:sequence>
+          <xsd:element name="FirstName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="MiddleName" type="xsd:string"/>
+          <xsd:element name="LastName" type="xsd:string"/>
+          <xsd:element name="PhoneNum" type="xsd:string"/>
+          <xsd:element name="Gender" type="xsd:string"/>
+          <xsd:element name="Email" type="xsd:string"/>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element name="Password" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CreateAccountResType">
+        <xsd:sequence>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element name="RespCode" type="xsd:string"/>
+          <xsd:element name="RespText" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CreateAccountReq" type="tns:CreateAccountReqType"/>
+      <xsd:element name="CreateAccountRes" type="tns:CreateAccountResType"/>
+      <xsd:complexType name="UpdateAccountReqType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="FirstName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="MiddleName" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="LastName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="PhoneNum" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Gender" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Email" type="xsd:string"/>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Password" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UpdateAccountResType">
+        <xsd:sequence>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element name="Status" type="xsd:string"/>
+          <xsd:element name="ResMsg" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="UpdateAccountReq" type="tns:UpdateAccountReqType"/>
+      <xsd:element name="UpdateAccountRes" type="tns:UpdateAccountResType"/>
+      <xsd:complexType name="DeactivateAccReqType">
+        <xsd:sequence>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element name="Password" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DeactivateAccResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="username" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResCode" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResMsg" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="DeactivateAccReq" type="tns:DeactivateAccReqType"/>
+      <xsd:element name="DeactivateAccRes" type="tns:DeactivateAccResType"/>
+      <xsd:complexType name="GetAccDetailsResType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="FirstName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="MiddleName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="LastName" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="PhoneNum" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Gender" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Email" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Username" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="Password" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ResCode" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ResMsg" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="GetAccDetailsRes" type="tns:GetAccDetailsResType"/>
+      <xsd:element name="GetAccDetailsReq" type="tns:GetAccDetailsReqType"/>
+      <xsd:complexType name="GetAccDetailsReqType">
+        <xsd:sequence>
+          <xsd:element name="username" type="xsd:string"/>
+          <xsd:element name="SessionID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="GetDeatilsResType">
+        <xsd:sequence>
+          <xsd:element name="Username" type="xsd:string"/>
+          <xsd:element name="Status" type="xsd:string"/>
+          <xsd:element name="ResMsg" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ResData" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="GetDeatils" type="tns:GetDeatilsResType"/>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://www.eniquesolution.com/E-Commerce/Common" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/Common">
+      <xsd:complexType name="PayloadType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="payload" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Payload" type="tns:PayloadType"/>
+      <xsd:element name="Fault" type="tns:faultType"/>
+      <xsd:complexType name="faultType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ErrorMsg" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ErrorCode" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="StackTrace" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateAccountRequest">
+    <wsdl:part element="tns0:CreateAccountReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateAccountResponse">
+    <wsdl:part element="tns0:CreateAccountRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateAccountFault">
+    <wsdl:part element="tns1:Fault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountRequest">
+    <wsdl:part element="tns0:UpdateAccountReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateAccountResponse">
+    <wsdl:part element="tns0:UpdateAccountRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsRequest">
+    <wsdl:part element="tns0:GetAccDetailsReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsResponse">
+    <wsdl:part element="tns0:GetAccDetailsRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeactivateAccountRequest">
+    <wsdl:part element="tns0:DeactivateAccReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="DeactivateAccountResponse">
+    <wsdl:part element="tns0:DeactivateAccRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="UserOnBoarding">
+    <wsdl:operation name="CreateAccount">
+      <wsdl:input message="tns:CreateAccountRequest"/>
+      <wsdl:output message="tns:CreateAccountResponse"/>
+      <wsdl:fault message="tns:CreateAccountFault" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <wsdl:input message="tns:UpdateAccountRequest"/>
+      <wsdl:output message="tns:UpdateAccountResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <wsdl:input message="tns:GetAccountDetailsRequest"/>
+      <wsdl:output message="tns:GetAccountDetailsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAccount">
+      <wsdl:input message="tns:DeactivateAccountRequest"/>
+      <wsdl:output message="tns:DeactivateAccountResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:UserOnBoarding">
+    <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+    <jms:binding messageFormat="text"/>
+    <wsdl:operation name="CreateAccount">
+      <soap:operation soapAction="CreateAccount" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAccount">
+      <soap:operation soapAction="UpdateAccount" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <soap:operation soapAction="GetAccountDetails" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateAccount">
+      <soap:operation soapAction="DeactivateAccount" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserOnBoarding">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="UserOnBoardingSOAP">
+      <soap:address location=""/>
+      <jms:connectionFactory/>
+      <jms:targetAddress destination="queue">UserOnBoarding.CreateAccount.q</jms:targetAddress>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

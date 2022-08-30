@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:smtp="http://xsd.tns.tibco.com/bw/models/sharedresource/smtp" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_pwkbEctlEeyPfuubtuuj3Q" name="es_common_model.SMTPResource" type="smtp:SmtpConfiguration">
+  <jndi:reference xmi:id="_p2fc4MtlEeyPfuubtuuj3Q" key="identityJNDIName" type="subject:SubjectConfiguration" value=""/>
+  <jndi:configuration xsi:type="smtp:SmtpConfiguration" xmi:id="_p2fc4ctlEeyPfuubtuuj3Q">
+    <tcpDetails xmi:id="_p2ljgMtlEeyPfuubtuuj3Q" port="25" connectionTimeout="60000"/>
+    <userCredentials xmi:id="_p2ljgctlEeyPfuubtuuj3Q"/>
+  </jndi:configuration>
+</jndi:namedResource>

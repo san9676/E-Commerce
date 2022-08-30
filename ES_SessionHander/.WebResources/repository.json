@@ -1,0 +1,25 @@
+{
+    "records": [],
+    "resources": [
+        {
+            "location": "Service Descriptors/es_sessionhander.Login-Login.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.CreateSession-CreateSession.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.Logout-Logout.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/SubProcesses.Logout-Logout.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/es_sessionhander.ValidSession-ValidSession.json",
+            "type": "generated"
+        }
+    ]
+}

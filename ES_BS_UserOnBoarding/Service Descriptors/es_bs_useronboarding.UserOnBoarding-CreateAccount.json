@@ -1,0 +1,288 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "CreateAccount",
+    "description" : "CreateAccount service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/createaccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-createaccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CreateAccountReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CreateAccountRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CreateAccountRes"
+            }
+          }
+        }
+      }
+    },
+    "/getAccount" : {
+      "get" : {
+        "summary" : "getCreateAccount",
+        "description" : "getCreateAccount",
+        "operationId" : "get-getAccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "Username",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "SessionId",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a GetDeatils to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/GetDeatils"
+            }
+          }
+        }
+      }
+    },
+    "/updateaccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-updateaccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/UpdateAccountReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a UpdateAccountRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateAccountRes"
+            }
+          }
+        }
+      }
+    },
+    "/deactivateAccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-deactivateAccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/DeactivateAccReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a DeactivateAccRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/DeactivateAccRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "DeactivateAccRes" : {
+      "type" : "object",
+      "properties" : {
+        "username" : {
+          "type" : "string"
+        },
+        "ResCode" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "UpdateAccountRes" : {
+      "type" : "object",
+      "required" : [ "Status", "ResMsg", "Username" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DeactivateAccReq" : {
+      "type" : "object",
+      "required" : [ "Username", "Password" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "GetDeatils" : {
+      "type" : "object",
+      "required" : [ "Status", "ResMsg", "Username" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "Status" : {
+          "type" : "string"
+        },
+        "ResMsg" : {
+          "type" : "string"
+        },
+        "Details" : {
+          "$ref" : "#/definitions/DetailsType"
+        }
+      }
+    },
+    "UpdateAccountReq" : {
+      "type" : "object",
+      "required" : [ "Username" ],
+      "properties" : {
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "PhoneNum" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Username" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        },
+        "SessionID" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateAccountReq" : {
+      "type" : "object",
+      "properties" : {
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "PhoneNum" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Username" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateAccountRes" : {
+      "type" : "object",
+      "required" : [ "RespCode", "Username", "RespText" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "RespCode" : {
+          "type" : "string"
+        },
+        "RespText" : {
+          "type" : "string"
+        }
+      }
+    },
+    "DetailsType" : {
+      "type" : "object",
+      "properties" : {
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "PhoneNum" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Username" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

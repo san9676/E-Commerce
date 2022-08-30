@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:jms="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolution.com/concrete/V1/payments/" xmlns:tns0="http://www.example.org/Payments" xmlns:tns1="http://www.eniquesolution.com/E-Commerce/Common" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="payments" targetNamespace="http://www.EniqueSolution.com/concrete/V1/payments/">
+  <wsdl:types>
+    <xsd:schema xmlns:tns="http://www.example.org/Payments" elementFormDefault="qualified" targetNamespace="http://www.example.org/Payments">
+      <xsd:element name="MakePaymentsReq" type="tns:MakePaymentReqType"/>
+      <xsd:complexType name="MakePaymentReqType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="orderId" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="transactionID" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="SessionID" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="MakePaymentRes" type="tns:MakePaymentResType"/>
+      <xsd:complexType name="MakePaymentResType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="transactionID" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ResCode" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="ResMsg" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:tns="http://www.eniquesolution.com/E-Commerce/Common" elementFormDefault="qualified" targetNamespace="http://www.eniquesolution.com/E-Commerce/Common">
+      <xsd:complexType name="PayloadType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="payload" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Payload" type="tns:PayloadType"/>
+      <xsd:element name="Fault" type="tns:faultType"/>
+      <xsd:complexType name="faultType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ErrorMsg" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="ErrorCode" type="xsd:string"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="StackTrace" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MakePaymentsRequest">
+    <wsdl:part element="tns0:MakePaymentsReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="MakePaymentsResponse">
+    <wsdl:part element="tns0:MakePaymentRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="MakePaymentsFault">
+    <wsdl:part element="tns1:Fault" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="payments">
+    <wsdl:operation name="MakePayments">
+      <wsdl:input message="tns:MakePaymentsRequest"/>
+      <wsdl:output message="tns:MakePaymentsResponse"/>
+      <wsdl:fault message="tns:MakePaymentsFault" name="fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:payments">
+    <soap:binding style="document" transport="http://www.tibco.com/namespaces/ws/2004/soap/binding/JMS"/>
+    <jms:binding messageFormat="text"/>
+    <wsdl:operation name="MakePayments">
+      <soap:operation soapAction="MakePayments" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="payments">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="paymentsSOAP">
+      <soap:address location=""/>
+      <jms:connectionFactory/>
+      <jms:targetAddress destination="queue">UserOnBoarding.CreateAccount.q</jms:targetAddress>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

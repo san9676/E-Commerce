@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.EniqueSolution.com/abstarct/V1/OrderManagement/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OrderManagement" targetNamespace="http://www.EniqueSolution.com/abstarct/V1/OrderManagement/" xmlns:xsd1="http://www.eniquesolution.com/E-Commerce/OrderManagement">
+  <wsdl:types>
+    
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import
+    		namespace="http://www.eniquesolution.com/E-Commerce/OrderManagement"
+    		schemaLocation="../../ES_BS_OrderManagement_SH/Schemas/OrderManagement.xsd">
+    	</xsd:import></xsd:schema><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.EniqueSolution.com/abstarct/V1/OrderManagement/">
+	</xsd:schema>
+	</wsdl:types>
+  <wsdl:message name="CreateOrderRequest">
+    <wsdl:part element="xsd1:CreateOrderReq" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateOrderResponse">
+    <wsdl:part element="xsd1:CreateOrderRes" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderRequest">
+  	<wsdl:part name="parameters" element="xsd1:updateOrderReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UpdateOrderResponse">
+  	<wsdl:part name="parameters" element="xsd1:updateOrderRes"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelOrderRequest">
+  	<wsdl:part name="parameters" element="xsd1:cancelOrderReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CancelOrderResponse">
+  	<wsdl:part name="parameters" element="xsd1:cancelOrderRes"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetOrderRequest">
+  	<wsdl:part name="parameters" element="xsd1:GetOrderReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetOrderResponse">
+  	<wsdl:part name="parameters" element="xsd1:GetOrderRes"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetOrderHistoryRequest">
+  	<wsdl:part name="parameters" element="xsd1:GetOrderHistoryReq"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetOrderHistoryResponse">
+  	<wsdl:part name="parameters" element="xsd1:GetOrderHistory"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="OrderManagement">
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input message="tns:CreateOrderRequest"/>
+      <wsdl:output message="tns:CreateOrderResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+    	<wsdl:input message="tns:UpdateOrderRequest"></wsdl:input>
+    	<wsdl:output message="tns:UpdateOrderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+    	<wsdl:input message="tns:CancelOrderRequest"></wsdl:input>
+    	<wsdl:output message="tns:CancelOrderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrder">
+    	<wsdl:input message="tns:GetOrderRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetOrderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderHistory">
+    	<wsdl:input message="tns:GetOrderHistoryRequest"></wsdl:input>
+    	<wsdl:output message="tns:GetOrderHistoryResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OrderManagementSOAP" type="tns:OrderManagement">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreateOrder">
+      <soap:operation soapAction="http://www.EniqueSolution.com/abstarct/V1/OrderManagement/CreateOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OrderManagement">
+    <wsdl:port binding="tns:OrderManagementSOAP" name="OrderManagementSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

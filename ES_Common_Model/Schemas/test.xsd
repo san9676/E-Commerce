@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/test" elementFormDefault="qualified" targetNamespace="http://www.example.org/test">
+      
+  <complexType name="UDFType">
+        	
+    <sequence>
+          		
+      <element maxOccurs="unbounded" minOccurs="0" ref="tns:UDS"/>
+          	
+    </sequence>
+        	
+    
+  </complexType>
+      
+  <element name="UDF" type="tns:UDFType"/>
+      
+  <complexType name="UDSType">
+        	
+    <sequence>
+          		
+      <element name="description" type="string"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="UDS" type="tns:sampletupe">
+    </element>
+      
+  <complexType name="sampletype">
+
+  	<simpleContent>
+
+  		<extension base="string">
+
+
+  			<attribute name="name" type="string"></attribute>
+  		</extension>
+
+  	</simpleContent>
+
+  </complexType>
+
+  <complexType name="sampletupe">
+        	
+    <complexContent>
+          		
+      <extension base="tns:UDSType">
+            			
+        <attribute name="name" type="string"/>
+            			
+            			
+            		
+      </extension>
+          	
+    </complexContent>
+        
+  </complexType>
+  
+</schema>

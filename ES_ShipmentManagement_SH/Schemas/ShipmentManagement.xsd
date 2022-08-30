@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ShipmentManagement" xmlns:tns="http://www.example.org/ShipmentManagement" elementFormDefault="qualified">
+
+    <element name="updateShipmentReq"
+    	type="tns:updateShipmentReqType">
+    </element>
+    
+    <element name="updateShipmentRes"
+    	type="tns:updateShipmentResType">
+    </element>
+    
+    <complexType name="updateShipmentReqType">
+    	<sequence>
+    	    <element name="TrackingID" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="OrderID" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="ProductID" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="Status" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="SessionID" type="string" minOccurs="0" maxOccurs="1"></element>
+
+    	</sequence>
+    </complexType>
+    
+    <complexType name="updateShipmentResType">
+    	<sequence>
+    		<element name="TrackingID" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="ResCode" type="string" minOccurs="0" maxOccurs="1"></element>
+    		<element name="ResMsg" type="string" minOccurs="0" maxOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="TrackShipReq" type="tns:TrackShipReqType"></element>
+    
+    <element name="TrackShipRes" type="tns:TrackShipResType"></element>
+    
+    <complexType name="TrackShipReqType">
+    	<sequence>
+    		<element name="TrackingID" type="string" minOccurs="0"></element>
+    		<element name="OrderID" type="string" minOccurs="0"></element>
+    		<element name="SessionID" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="TrackShipResType">
+        	<sequence>
+        		<element name="TrackingID" type="string" minOccurs="0"
+        			maxOccurs="1">
+        		</element>
+        		<element name="Status" type="string" minOccurs="0"
+        			maxOccurs="1"></element>
+        		<element name="ResCode" type="string" minOccurs="0"
+        			maxOccurs="1">
+        		</element>
+        		<element name="ResMsg" type="string" minOccurs="0"
+        			maxOccurs="1">
+        		</element>
+        		
+        	</sequence>
+    </complexType>
+</schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Payments" xmlns:tns="http://www.example.org/Payments" elementFormDefault="qualified">
+
+    <element name="MakePaymentsReq" type="tns:MakePaymentReqType"></element>
+
+    <complexType name="MakePaymentReqType">
+    	<sequence>
+    		<element name="orderId" type="string" minOccurs="0"></element>
+    		<element name="transactionID" type="string" minOccurs="0"></element>
+    		<element name="SessionID" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="MakePaymentRes" type="tns:MakePaymentResType"></element>
+    
+    <complexType name="MakePaymentResType">
+    	<sequence>
+    		<element name="transactionID" type="string" minOccurs="0"></element>
+    		<element name="ResCode" type="string" minOccurs="0"></element>
+    		<element name="ResMsg" type="string" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

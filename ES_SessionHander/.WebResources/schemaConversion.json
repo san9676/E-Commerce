@@ -1,0 +1,27 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/ES_SessionHander/Service Descriptors/es_sessionhander.Login-Login.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "/T1651640981662Converted/JsonSchema"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHander/Service Descriptors/es_sessionhander.CreateSession-CreateSession.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/SessionHandler"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHander/Service Descriptors/es_sessionhander.Login-Login.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/SessionHandler"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHander/Service Descriptors/es_sessionhander.Logout-Logout.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/SessionHandler"
+    },
+    {
+        "jsonSchemaLocation": "/ES_SessionHander/Service Descriptors/es_sessionhander.ValidSession-ValidSession.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/SessionHandler"
+    }
+]}

@@ -1,0 +1,86 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "CreateAccount",
+    "description" : "CreateAccount service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/createaccount" : {
+      "post" : {
+        "summary" : "postCreateAccount",
+        "description" : "postCreateAccount",
+        "operationId" : "post-createaccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/CreateAccountReq"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a CreateAccountRes to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/CreateAccountRes"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "CreateAccountReq" : {
+      "type" : "object",
+      "required" : [ "Email", "PhoneNum", "Username", "FirstName", "LastName", "Gender", "Password" ],
+      "properties" : {
+        "FirstName" : {
+          "type" : "string"
+        },
+        "MiddleName" : {
+          "type" : "string"
+        },
+        "LastName" : {
+          "type" : "string"
+        },
+        "PhoneNum" : {
+          "type" : "string"
+        },
+        "Gender" : {
+          "type" : "string"
+        },
+        "Email" : {
+          "type" : "string"
+        },
+        "Username" : {
+          "type" : "string"
+        },
+        "Password" : {
+          "type" : "string"
+        }
+      }
+    },
+    "CreateAccountRes" : {
+      "type" : "object",
+      "required" : [ "RespCode", "Username", "RespText" ],
+      "properties" : {
+        "Username" : {
+          "type" : "string"
+        },
+        "RespCode" : {
+          "type" : "string"
+        },
+        "RespText" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

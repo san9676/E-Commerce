@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/ES_BS_ProductManagement/Service Descriptors/es_bs_productmanagement.ProductManagement-ProductManagement.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "http://www.eniquesolution.com/E-Commerce/ProductManagement"
+}]}

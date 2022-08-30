@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.eniquesolution.com/E-Commerce/SessionHandler" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.eniquesolution.com/E-Commerce/SessionHandler">
+
+    <complexType name="LoginReqType">
+    	<sequence>
+    		<element name="Username" type="string"></element>
+    		<element name="Password" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="LoginResType">
+    	<sequence>
+    		<element name="Username" type="string"></element>
+    		<element name="Status" type="string"></element>
+    		<element name="SessionID" type="string"></element>
+    		<element name="ResMsg" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="LogoutResType">
+    	<sequence>
+    		<element name="Username" type="string"></element>
+    		<element name="Status" type="string"></element>
+    		<element name="ResponseMsg" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CreateSessionReqType">
+    	<sequence>
+    		<element name="Username" type="string"></element>
+    		<element name="ReqTimeStamp" type="string"></element>
+    		<element name="TransactionID" type="string"></element>
+    	</sequence>
+    </complexType>
+    <complexType name="CreateSessionResType">
+    	<sequence>
+    		<element name="Username" type="string"></element>
+    		<element name="ResTimeStamp" type="string"></element>
+    		<element name="TransactionID" type="string"></element>
+    		<element name="SessionID" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="ValidateSessionReqType">
+    	<sequence>
+    		<element name="username" type="string"></element>
+    		<element name="ReqTimestamp" type="string"></element>
+    		<element name="SessionID" type="string"></element>
+    		<element name="TransactionID" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="ValidateSessionResType">
+    	<sequence>
+    		<element name="username" type="string"></element>
+    		<element name="isSessionExpired" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="CreateSessionReq" type="tns:CreateSessionReqType"></element>
+    <element name="CreateSessionRes" type="tns:CreateSessionResType"></element>
+    <element name="LoginReq" type="tns:LoginReqType"></element>
+    
+    <element name="LoginRes" type="tns:LoginResType"></element>
+    
+    <element name="LogoutRes" type="tns:LogoutResType"></element>
+    
+    <element name="ValidateSessionReq"
+    	type="tns:ValidateSessionReqType">
+    </element>
+    
+    <element name="ValidateSessionRes"
+    	type="tns:ValidateSessionResType">
+    </element>
+
+    <complexType name="LogoutReqType">
+    	<sequence>
+    		<element name="Username" type="string"></element>
+    		<element name="SessionID" type="string"></element>
+    		<element name="TransactionID" type="string" minOccurs="0"></element>
+    		<element name="ReqTimeStamp" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="LogoutReq" type="tns:LogoutReqType"></element>
+</schema>
